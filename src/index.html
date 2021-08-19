@@ -1,13 +1,1049 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>Formulario</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form>
+      <div class="container-fluid bg p-2">
+        <div class="col-md-12 d-flex justify-content-center align-items-center h-100 bggradient container-fluid">
+            <div class="col-md-5 border cor1 raio mt-5 mb-4">
+               
+                <h3 class="text-center mb-2 p-2 bg-secondary">FISCALIZAÇÃO DE SUBESTAÇÃO </h3>
+                <h6 class="text-center mb-2 p-1">CHECK-LIST PARA INSPEÇÃO DE CAMPO - tempo de vistoria 40 minutos</h6>
+                <div class="row">
+                    <div class="col">
+                      <input type="text" id="nomeSubestacao" class="form-control" placeholder="Nome da Subestação" >
+                    </div>
+                    <div class="col">
+                      <input type="text" id="local" class="form-control" placeholder="Local" >
+                    </div>
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col mt-2">
+                      <input type="text" id="email" class="form-control" placeholder="Email" >
+                    </div>
+                    <div class="col mt-2">
+                      <input type="date" id="dataFiscalizacao" class="form-control" aria-label="Data">
+                    </div>
+                  </div>
+                 
+                 
+        <div class="form-group mb-2 p-2">
+            <h6 class="bg-secondary">Grupo I - Unifilar</h6>
+            <div class="form-group mb-2 p-2">
+            <h6 id="tipoEstacao" >Tipo de Estação</h6>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Abrir para selecionar</option>
+                <option value="1">Alimentadora</option>
+                <option value="2">Elevadora</option>
+                <option value="3">Abaixadora</option>
+                <option value="3">Manobra</option>
+                <option value="3">Convencional</option>
+                <option value="3">Blindada</option>
+              </select>
+            </div>
+      
+              <div class="form-group mb-2 p-2">
+              <h6 id="nivelTensao" >Nível de Tensão</h6>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Abrir para selecionar</option>
+                <option value="1">13.8 kV</option>
+                <option value="2">34.5kV</option>
+                <option value="3">69kV</option>
+              </select>
+            </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h4>Potência de Transformação ou Alimentação da Estação (MVA)</h4>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Quantidade de Entradas de LT</label>
+                <input type="text" id="potenciaTransfQdeEntLT" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Quantidade de Saída LT ou Alimentador</label>
+                <input type="text" id="potenciaTransfQdeSaiLT" class="form-control" id="formGroupExampleInput2" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nível de Tensão da LT de Entrada (kV)</label>
+                <input type="text" id="potenciaTransfNivTensEntrLT" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Nível de Tensão da LT de Saída (kV)</label>
+                <input type="text" id="potenciaTransfNivTensSaiLT" class="form-control" id="formGroupExampleInput2" placeholder="">
+              </div>
+      
+              <div class="form-group mb-2 p-2">
+              <h6 >Verificação de atualização do diagrama unifilar</h6>
+              <select  id="verificacaoAtualizacaoDiagramaUnifiliar" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Abrir para selecionar</option>
+                <option value="1"> Compatibilidade entre arranjo físico de equipamentos com unifilar</option>
+                <option value="2">Verificação da instalação física de cada equipamento descrito no unifilar</option>
+                <option value="3">Verificação dos tags nas placas dos equipamentos físicos com o diagrama unifilar de operação</option>
+              </select>
+            </div>
+              
+                  <div class="mb-3 p-2">
+                    <label for="formGroupExampleInput" class="form-label">Descrição da verificação</label>
+                    <input type="text" id="" class="form-control" id="formGroupExampleInput" placeholder="">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFileSm" class="form-label">Insira evidências aqui</label>
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+                  
+      </div>
+      <div class="form-group">
+        <h6 class="bg-secondary">Grupo II - Equipamentos</h6>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nível de Curto-Circuito dos Equipamentos (kA) </label>
+            <input type="text" id="" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nível de Isolamento dos Equipamentos - NBI (kV)  </label>
+            <input type="text" id="equipNivelCurtCircuit" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Vida útil dos equipamentos </label>
+            <input type="text" id="equipNivelIsolamento" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Tempo de Instalação</label>
+            <input type="text" id="equipTempoInstalacao" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+      
+          <div class="mb-3">
+            <h4>Para-raios</h4>
+            <h6>Inspeção Visual</h6>
+          <div class="form-check">
+                <input class="form-check-input" id="paraRaiosTempConexEletrica" type="checkbox" value="" >
+                <label class="form-check-label" for="flexCheckDefault">
+                  Feito
+                </label>
+              </div>
+            </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Temperatura da Conexão Elétrica (ºC) </label>
+            <input type="text" id="paraRaiosTempConexEletrica" class="form-control"  placeholder="">
+          </div>
+        </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Material (SiC/Oxido de Zinco - ZnO) </label>
+            <input type="text" id="paraRaiosMaterial"  class="form-control" placeholder="">
+          </div>
+      
+          <div class="mb-3">
+            <h4>Bobinas de Bloqueio (comunicações)</h4>
+            <h6>Inspeção Visual</h6>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Feito
+                </label>
+              </div>
+            </div>
+      
+          <div class="">
+            <label for="formGroupExampleInput" class="form-label">Temperatura da Conexão Elétrica (ºC) </label>
+            <input type="text" class="form-control" id="bobinasBloqueioTempConexEletrica" placeholder="">
+          </div>
+        </div>
+      
+          <div class="mb-3 p-2">
+            <label for="formGroupExampleInput" class="form-label">Condição de Conservação da Caixa de Comunicação 
+            </label>
+            <input type="text" class="form-control" id="bobinBloqueioCondiConservaCxaComunicaC" placeholder="">
+          </div>
+      
+          <div class="mb-3">
+            <h4>TPs</h4>
+            <h6>Inspeção Visual</h6>
+          <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Feito
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Temperatura da Conexão Elétrica (ºC)</label>
+              <input type="text" class="form-control" id="TPsTemperatConexElect" placeholder="">
+            </div>
+      
+          <div class="form-group mb-2 p-2">
+            <h6 >Tipo (Indutivo/Capacitivo)</h6>
+            <select class="form-select form-select-sm" id="TPsTipo" aria-label=".form-select-sm example">
+              <option selected>Abrir para selecionar</option>
+              <option value="1">Indutivo</option>
+              <option value="2">Capacitivo</option>
+            </select>
+          </div>
+          
+          <h4>TCs</h4>
+          <h6>Inspeção Visual</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="insp">
+            <label class="form-check-label" for="flexCheckDefault">
+              Feito
+            </label>
+          </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Temperatura da Conexão Elétrica (ºC)</label>
+            <input type="text" class="form-control" id="TCsTemperatConexElect" placeholder="">
+          </div>
+      
+          <div class="form-group mb-2 p-2">
+              <h6 >Tipo (Indutivo/Capacitivo)</h6>
+              <select id="TCsTipo" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Abrir para selecionar</option>
+                <option value="1">Indutivo</option>
+                <option value="2">Capacitivo</option>
+              </select>
+            </div>
+      
+          <h4>Chaves</h4>
+          <h6>Inspeção Visual</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="insp">
+            <label class="form-check-label" for="flexCheckDefault">
+              Feito
+            </label>
+          </div> 
+          
+            <div class="form-row">
+                <div class="form-group mb-3">
+                  <label for="inputTemperatura das Conexões Elétricas">Temperatura das Conexões Elétricas</label>
+                  <input type="text" class="form-control" id="chavesTemperatConexElect" >
+                </div>
+                <div class="form-group mb-3">
+                  <label for="inputTipo de Abertura (Central, Dupla Lateral, Vertical, Pantográfica)">Tipo de Abertura (Central, Dupla Lateral, Vertical, Pantográfica)</label>
+                  <input type="text" class="form-control" id="chavesTipoAberturA" >
+                </div>
+              </div>
+      
+              <div class="form-group  mb-3">
+                <label for="inputManual ou Motorizada">Manual ou Motorizada</label>
+                <input type="text" class="form-control" id="chavesTipo" >
+              </div>
+      
+              <div class="form-group  mb-3">
+                <label for="inputCaixa de comando local">Caixa de comando local</label>
+                <input type="text" class="form-control" id="chavesCxa">
+              </div>
+      
+              
+                <div class="form-group mb-3">
+                  <label for="inputLâmina de Terra (Sim/ Não)">Lâmina de Terra (Sim/ Não)</label>
+                  <input type="text" class="form-control" id="chavesTensNominal">
+                </div>
+      
+                <div class="form-group mb-3">
+                    <label for="inputTensão Nominal (kV)">Tensão Nominal (kV)</label>
+                    <input type="text" class="form-control" id="chavesTensNominal">
+                  </div>
+      
+                  <div class="form-group mb-3">
+                    <label for="inputCorrente Nominal (A)">Corrente Nominal (A)</label>
+                    <input type="text" class="form-control" id="chavesCorrenteNominal">
+                  </div>
+      
+                  <h4>Disjuntores</h4>
+          <h6>Inspeção Visual</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Feito
+            </label>
+          </div>  
+      
+            <div class="form-group mb-3">
+                <label for="Temperatura das Conexões Elétricas">Temperatura das Conexões Elétricas</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+      
+              <div class="form-group mb-3">
+                <label for="inputMecanismo de Extinção de Arco (Óleo / Vácuo / Gás SF6 ):">Mecanismo de Extinção de Arco (Óleo / Vácuo / Gás SF6 ):</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+      
+              <div class="form-group mb-3">
+                <label for="inputPainel de Comando Local">Painel de Comando Local</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+      
+              <div class="form-group mb-2 p-2">
+                <h6 >Sistema disparador do Disjuntor</h6>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option selected>Abrir para selecionar
+                </option>
+                <option value="1">Mola
+                </option>
+                  <option value="2">Solenoide
+                </option>
+                  <option value="3">Ar Comprimido
+                </option>
+                </select>
+              </div>
+      
+            
+      
+          <h4>Transformadores</h4>
+          <h6>Trafo 1</h6>
+          <div class="form-group mb-3">
+            <label for="Tipo (Trifásico ou Banco de Transformadores Monofásico)">Tipo (Trifásico ou Banco de Transformadores Monofásico)</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Ausência de vazamento em flanges">Ausência de vazamento em flanges</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Verificação de ventilação forçada">Verificação de ventilação forçada</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Saturação da Silica Gel">Saturação da Silica Gel</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Verificação de Temperatura nas conexões elétricas">Verificação de Temperatura nas conexões elétricas</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Nível de  Ruído">Nível de  Ruído</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Potência Nominal">Potência Nominal</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Tipo de Isolação (Óleo / Seco)">Tipo de Isolação (Óleo / Seco)</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Estado de Conservação das Buchas Primário/Secundário">Estado de Conservação das Buchas Primário/Secundário</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Ausencia de pontos de corrosão ou má conservação da pintura ">Ausencia de pontos de corrosão ou má conservação da pintura </label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Placa de Informações Construtivas e Elétrica">Placa de Informações Construtivas e Elétrica</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Fechamento dos enrolamentos primário e secundário (Estrela - Delta)">Fechamento dos enrolamentos primário e secundário (Estrela - Delta)</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Existência de Comutador Automático em Carga de TAP">Existência de Comutador Automático em Carga de TAP</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Impedância">Impedância</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <h6>Trafo 2</h6>
+      
+          <div class="form-group mb-3">
+            <label for="Ausência de vazamento em flanges">Ausência de vazamento em flanges</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Saturação da Silica Gel">Saturação da Silica Gel</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Verificação de ventilação forçada">Verificação de ventilação forçada</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Verificação de Temperatura nas conexões elétricas">Verificação de Temperatura nas conexões elétricas</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Nível de  Ruído">Nível de  Ruído</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Potência Nominal">Potência Nominal</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Tipo de Isolação (Óleo / Seco)">Tipo de Isolação (Óleo / Seco)</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Estado de Conservação das Buchas Primário/Secundário">Estado de Conservação das Buchas Primário/Secundário</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Ausencia de pontos de corrosão ou má conservação da pintura ">Ausencia de pontos de corrosão ou má conservação da pintura </label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Placa de Informações Construtivas e Elétrica">Placa de Informações Construtivas e Elétrica</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Fechamento dos enrolamentos primário e secundário (Estrela - Delta)">Fechamento dos enrolamentos primário e secundário (Estrela - Delta)</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-3">
+            <label for="Existência de Comutador Automático em Carga de TAP">Existência de Comutador Automático em Carga de TAP</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+      
+          <div class="form-group mb-3">
+            <label for="Impedância">Impedância</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+      
+          <div class="form-group mb-2 p-2">
+          <h6>Banco de Capacitores - Shunt</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Placa de Informações Elétricas e construtivas
+            </label>
+          </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nivel de Tensão 
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Potência da Célula (kVA)
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Potência do Banco de Capacitores (kVA)
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Tipo de Material Isolante
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+      
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Aterramento do Banco de Capacitores
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Tipo de Ligação do Banco de Capacitores (Delta / Estrela)
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+        </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h6>Reatores</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Placa de Informações Elétricas e construtivas
+                </label>
+              </div>
+      
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                   Buchas
+                </label>
+              </div>
+      
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Aspecto de conservação e pintura
+                </label>
+              </div>
+        </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h6>Isoladores</h6>
+            <h4>Tipo Disco</h4>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Qtd de isoladores 
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Material (Porcelana/Vidro)
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+        </div>
+      
+        <div class="form-group mb-2 p-2">
+        <h4>Tipo Coluna</h4>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Tipo (Multicorpo / Pedestal )
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Material (Porcelana/Vidro/Polimérico)
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+      </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h6>Muflas</h6>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Visual (não apresenta ressecamento)
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+        </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h6 class="bg-secondary">Grupo III - Cubículos        </h6>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Verificar estado geral de conservação e manutenção, maçanetas, portas, vidros, sinalização
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+        </div>
+      
+        <div class="form-group mb-2 p-2">
+            <h6 class="bg-secondary">Grupo IV - Paineis        </h6>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Painéis de Comando e Controle
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Painéis de Proteção
+      
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Software e Sistema de Dados - Operação e Supervisório
+      
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Comunicação de Proteção
+      
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Comunicação Remota de Operação Assistida
+      
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+      
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Estado de Conservação e manuseio de IHM 
+      
+                </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+              </div>
+        </div>
+      
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Conexão adequada de bornes 
+            </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+      
+      
+      <div class="form-group mb-2 p-2">
+        <h6 class="bg-secondary">Grupo V -  Equipamentos de Serviços Auxiliares        </h6>
+      
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Transformadores de S.A
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Painel CA de S.A
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Sala e Conjunto de Baterias
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Lava-olhos
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Ventilação natural ou forçada na sala de baterias
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Carregador/Retificador de Baterias
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Ausência de corrosão em polos de baterias
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"> Gerador de Emergência
+          </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+          </div>
+        
+          <div class="form-group mb-2 p-2">
+            <h6 class="bg-secondary">Grupo VI - Cablagem	  </h6>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label"> Verificação do estado de conservação dos cabos em canaletas e eletrocalhas </label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> Verificação do espaço suficiente em eletrocalhas para circulação de ar, manutenção da temperatura adequada de operação </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+              </div>
+              
+              <div class="form-group mb-2 p-2">
+                <h6 class="bg-secondary">Grupo VII - Aterramento e Proteção Contra Descargas atmosféricas		
+                </h6>
+            </div>
+      
+            <div class="form-group mb-2 p-2">
+                <h6 class="bg-secondary">	Grupo VIII - Arranjo Eletromecânico </h6>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label"> Tipo de manobra/chaveamento do barramento
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Vão de Linha 1 - Quantidade de equipamentos instalados por vão
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Vão de Linha 2 - Quantidade de equipamentos instalados por vão
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificar as condições de conservação/manutenção dos equipamentos
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Pintura de colunas, vigas, pórtico
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Ausência de corrosão em estruturas metálicas
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação no livro de ocorrências da ETD relatos recente de problemas com algum equipamento
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Considerando relatos do livro de ocorrências avaliar a necessidade de uma inspeção termográfica em conexões gambiarra (SIM ou NÃO)
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação de conexões elétricas precárias
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Qtd de pontos quentes em conexões elétricas inspecionadas termograficamente
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Maior temperatura observada em conexões inspecionadas
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificar o estado de conservação da porcelana dos isoladores de pedestal e de equipamentos
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Disponibilidade de equipamentos reserva na ETD (SIM ou NÃO , qual?)
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação do estado de conservação de suportes metálicos, pilares e de concreto, ausência de sinais de corrosão ou ferragem exposta, pórticos </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação de ocorrência de equipamentos fixados precariamente na base
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Ausência de Tampa de Canaleta Quebrada
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Istado de Conservação de Canaletas
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação de adequação da área britada
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Verificação da adequação de distâncias elétricas mínimas de segurança
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Existência de Parede Corta-fogo nos transformadores
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> Caixa separadora de água-oleo dos transformadores
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>              
+            </div>
+      
+            <div class="form-group mb-2 p-2">
+                <h6 class="bg-secondary">Grupo IX - Testes</h6>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de funcionamento da ventilação forçada
+                   </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de manobra em chaves seccionadoras
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de manobra em disjuntores
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">
+                  Teste de partida do Gerador de Emergência 
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">
+                  Teste de Comissionamento dos Transformadores 
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de Relé
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de Ruído
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"> 
+                  Teste de Temperatura - Termografia
+                  </label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+                  </div>              
+        </div>
+             
+        <div class="form-group mb-2 p-2">
+            <h6 class="bg-secondary">Grupo X - Conservação da Infra-Estrutura</h6>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Muro da ETD se tem danos, rachadura, placas de segurança
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Concertina
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Placa com o Nome da ETD
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Placa de sinalização de Alta Tensão ou Advertência
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              O entorno
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">
+              Aterramento do portão 
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Validade e adequação do AVCB (prazo de validade)
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Disponibilidade de Extintores de Incêndio e adequação do tipo de extintor ao material de serviço
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Ausência de vazamento no telhado da sala de controle
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Funcionalidade do ar-condicionado na sala de controle
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">
+              Adequação de acomodações (vestiário, água) aos operadores se existente 
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Existência de EPCs, chaves ou bastão de manobra
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">
+              Pintura da sala de controle, ausência de sinais de corrosão em painéis 
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Ausência de má formação ou desnível no pátio de manobra com formação de poças dágua
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div> 
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Iluminação do Pátio de Manobra funcionando
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Ausência de vegetação no pátio de manobra
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Ausência de material inservível na subestação
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Monitoramento por cameras de segurança CFTV
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Nível de ruido adequado ao padrão de tolerancia saudável estabelecido por norma MS
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Ausência de equipamentos funcionando fora da faixa nominal de operação ou carregamento
+              </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+              
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"> 
+              Equipamento operando fora da faixa nominal </label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=" ">
+              </div>
+        </div>
+      </div>
+      
+      <button type="button"  class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Enviar
+      </button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("form").on("button", e => {
+        e.preventDefault();
+
+        const email = $("#email")
+          .val()
+          .trim();
+        const subject = $("#subject")
+          .val()
+          .trim();
+        const text = $("#text")
+          .val()
+          .trim();
+
+        const data = {
+          email,
+          subject,
+          text
+        };
+
+        $.post("/email", data)
+          .then(() => {
+            window.location.href = "/email/sent";
+          })
+          .catch(() => {
+            window.location.href = "/error";
+          });
+      });
+    </script>
+  </body>
+</html> 
